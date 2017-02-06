@@ -14,6 +14,7 @@
 		F249DC001E48174B00C12272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F249DBFE1E48174B00C12272 /* LaunchScreen.storyboard */; };
 		F249DC0B1E48174B00C12272 /* PFAudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F249DC0A1E48174B00C12272 /* PFAudioTests.swift */; };
 		F249DC161E48174C00C12272 /* PFAudioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F249DC151E48174C00C12272 /* PFAudioUITests.swift */; };
+		F249DC251E48270B00C12272 /* PFAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F249DC241E48270B00C12272 /* PFAudio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F249DC111E48174C00C12272 /* PFAudioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PFAudioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F249DC151E48174C00C12272 /* PFAudioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFAudioUITests.swift; sourceTree = "<group>"; };
 		F249DC171E48174C00C12272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F249DC241E48270B00C12272 /* PFAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFAudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		F249DBF41E48174B00C12272 /* PFAudio */ = {
 			isa = PBXGroup;
 			children = (
+				F249DC231E4826F000C12272 /* PFAudio */,
 				F249DBF51E48174B00C12272 /* AppDelegate.swift */,
 				F249DBF71E48174B00C12272 /* ViewController.swift */,
 				F249DBF91E48174B00C12272 /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				F249DC171E48174C00C12272 /* Info.plist */,
 			);
 			path = PFAudioUITests;
+			sourceTree = "<group>";
+		};
+		F249DC231E4826F000C12272 /* PFAudio */ = {
+			isa = PBXGroup;
+			children = (
+				F249DC241E48270B00C12272 /* PFAudio.swift */,
+			);
+			path = PFAudio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F249DC251E48270B00C12272 /* PFAudio.swift in Sources */,
 				F249DBF81E48174B00C12272 /* ViewController.swift in Sources */,
 				F249DBF61E48174B00C12272 /* AppDelegate.swift in Sources */,
 			);
