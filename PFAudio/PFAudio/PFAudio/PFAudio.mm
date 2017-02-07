@@ -14,7 +14,7 @@
 //转换amr到wav
 + (BOOL) amr2Wav:(NSString *)amrPath isDeleteSourchFile:(BOOL)isDelete{
     NSString *outPath = [[amrPath stringByDeletingPathExtension] stringByAppendingString:@".wav"];
-    BOOL isSuccess = DecodeAMRFileToWAVEFile([amrPath cStringUsingEncoding:NSASCIIStringEncoding], [outPath cStringUsingEncoding:NSASCIIStringEncoding]) == 1;
+    BOOL isSuccess = DecodeAMRFileToWAVEFile([amrPath cStringUsingEncoding:NSASCIIStringEncoding], [outPath cStringUsingEncoding:NSASCIIStringEncoding]) ;
     if (isSuccess && isDelete) {
         NSFileManager *fm = [NSFileManager defaultManager];
         [fm removeItemAtPath:amrPath error:nil];
@@ -29,7 +29,7 @@
     long rateKey = [[self GetAudioRecorderSettingDict][AVSampleRateKey] longValue];
     long bitDepthKey = [[self GetAudioRecorderSettingDict][AVLinearPCMBitDepthKey] longValue];
     long numOfChannelsKey = [[self GetAudioRecorderSettingDict][AVNumberOfChannelsKey] longValue];
-    BOOL isSuccess = EncodeWAVEFileToAMRFile([wavPath cStringUsingEncoding:NSASCIIStringEncoding], [outPath cStringUsingEncoding:NSASCIIStringEncoding], 2, 16) == 1;
+    BOOL isSuccess = EncodeWAVEFileToAMRFile([wavPath cStringUsingEncoding:NSASCIIStringEncoding], [outPath cStringUsingEncoding:NSASCIIStringEncoding], 2, 16);
     if (isSuccess && isDelete) {
         NSFileManager *fm = [NSFileManager defaultManager];
         [fm removeItemAtPath:wavPath error:nil];

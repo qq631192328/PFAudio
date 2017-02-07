@@ -10,5 +10,4 @@
 #define PFAudio_bridge_header_h
 
 #import "PFAudio.h"
-#import "lameTool.h"
 #endif /* PFAudio_bridge_header_h */
