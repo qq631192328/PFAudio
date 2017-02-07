@@ -26,11 +26,11 @@ class ViewController: UIViewController {
             // 采样率
             AVSampleRateKey: NSNumber(float: 8000),
             // 通道数
-            AVNumberOfChannelsKey: NSNumber(int: 1),
+            AVNumberOfChannelsKey: NSNumber(int: 2),
             // 录音质量
             AVEncoderAudioQualityKey: NSNumber(int: Int32(AVAudioQuality.Min.rawValue))
         ]
-        
+        print(configDic)
         do {
             let record = try AVAudioRecorder(URL: url!, settings: configDic)
             // 准备录音(系统会给我们分配一些资源)
@@ -89,8 +89,10 @@ class ViewController: UIViewController {
         
 //        VoiceConverter.ConvertWavToAmr("/Users/hpf/Desktop/test.wav", amrSavePath: "/Users/hpf/Desktop/test.amr")
         
-        lameTool.audioToMP3("/Users/hpf/Desktop/test.pcm", isDeleteSourchFile: true)
+//        lameTool.audioToMP3("/Users/hpf/Desktop/test.pcm", isDeleteSourchFile: true)
         
+        PFAudio.pcm2Mp3("/Users/hpf/Desktop/test.pcm", isDeleteSourchFile: true)
+//        PFAudio.audioToMP3("/Users/hpf/Desktop/test.pcm", isDeleteSourchFile: true)
     }
     
     override func viewDidLoad() {
