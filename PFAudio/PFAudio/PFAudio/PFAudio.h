@@ -39,7 +39,6 @@
  *  @return NO 失败 YES成功
  */
 + (BOOL) pcm2Mp3: (NSString *)pcmPath isDeleteSourchFile:(BOOL)isDelete;
-+ (NSString *)audioToMP3: (NSString *)sourcePath isDeleteSourchFile:(BOOL)isDelete;
 /**
  *  转换pcm到wav
  *
