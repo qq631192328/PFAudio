@@ -9,5 +9,10 @@
 import UIKit
 
 class PFAudio: NSObject {
-
+    
+    static let shareInstance = PFAudio()
+    
+    
+    
+    
 }

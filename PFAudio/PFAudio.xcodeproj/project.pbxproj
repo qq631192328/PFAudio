@@ -15,6 +15,13 @@
 		F249DC0B1E48174B00C12272 /* PFAudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F249DC0A1E48174B00C12272 /* PFAudioTests.swift */; };
 		F249DC161E48174C00C12272 /* PFAudioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F249DC151E48174C00C12272 /* PFAudioUITests.swift */; };
 		F249DC251E48270B00C12272 /* PFAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F249DC241E48270B00C12272 /* PFAudio.swift */; };
+		F249DC351E48554800C12272 /* voiceAmrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = F249DC291E48554800C12272 /* voiceAmrFileCodec.mm */; };
+		F249DC361E48554800C12272 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F249DC2B1E48554800C12272 /* libopencore-amrnb.a */; };
+		F249DC371E48554800C12272 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F249DC2C1E48554800C12272 /* libopencore-amrwb.a */; };
+		F249DC381E48554800C12272 /* VoiceConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = F249DC341E48554800C12272 /* VoiceConverter.mm */; };
+		F249DC3F1E486BD300C12272 /* lameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F249DC3D1E486BD300C12272 /* lameTool.m */; };
+		F249DC401E486BD300C12272 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F249DC3E1E486BD300C12272 /* libmp3lame.a */; };
+		F249DC431E495DED00C12272 /* PFAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = F249DC421E495DED00C12272 /* PFAudio.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,23 @@
 		F249DC151E48174C00C12272 /* PFAudioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFAudioUITests.swift; sourceTree = "<group>"; };
 		F249DC171E48174C00C12272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F249DC241E48270B00C12272 /* PFAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFAudio.swift; sourceTree = "<group>"; };
+		F249DC281E48554800C12272 /* voiceAmrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voiceAmrFileCodec.h; sourceTree = "<group>"; };
+		F249DC291E48554800C12272 /* voiceAmrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = voiceAmrFileCodec.mm; sourceTree = "<group>"; };
+		F249DC2B1E48554800C12272 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		F249DC2C1E48554800C12272 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		F249DC2E1E48554800C12272 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		F249DC2F1E48554800C12272 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		F249DC311E48554800C12272 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		F249DC321E48554800C12272 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		F249DC331E48554800C12272 /* VoiceConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceConverter.h; sourceTree = "<group>"; };
+		F249DC341E48554800C12272 /* VoiceConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VoiceConverter.mm; sourceTree = "<group>"; };
+		F249DC391E485A7000C12272 /* PFAudio-bridge-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PFAudio-bridge-header.h"; sourceTree = "<group>"; };
+		F249DC3B1E486BD300C12272 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		F249DC3C1E486BD300C12272 /* lameTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lameTool.h; sourceTree = "<group>"; };
+		F249DC3D1E486BD300C12272 /* lameTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lameTool.m; sourceTree = "<group>"; };
+		F249DC3E1E486BD300C12272 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		F249DC411E495DED00C12272 /* PFAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFAudio.h; sourceTree = "<group>"; };
+		F249DC421E495DED00C12272 /* PFAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFAudio.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F249DC401E486BD300C12272 /* libmp3lame.a in Frameworks */,
+				F249DC371E48554800C12272 /* libopencore-amrwb.a in Frameworks */,
+				F249DC361E48554800C12272 /* libopencore-amrnb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +133,7 @@
 				F249DBFC1E48174B00C12272 /* Assets.xcassets */,
 				F249DBFE1E48174B00C12272 /* LaunchScreen.storyboard */,
 				F249DC011E48174B00C12272 /* Info.plist */,
+				F249DC391E485A7000C12272 /* PFAudio-bridge-header.h */,
 			);
 			path = PFAudio;
 			sourceTree = "<group>";
@@ -131,9 +159,73 @@
 		F249DC231E4826F000C12272 /* PFAudio */ = {
 			isa = PBXGroup;
 			children = (
+				F249DC3A1E486BD300C12272 /* lame */,
+				F249DC261E48554800C12272 /* VoiceConvert */,
 				F249DC241E48270B00C12272 /* PFAudio.swift */,
+				F249DC411E495DED00C12272 /* PFAudio.h */,
+				F249DC421E495DED00C12272 /* PFAudio.m */,
 			);
 			path = PFAudio;
+			sourceTree = "<group>";
+		};
+		F249DC261E48554800C12272 /* VoiceConvert */ = {
+			isa = PBXGroup;
+			children = (
+				F249DC271E48554800C12272 /* amrwapper */,
+				F249DC2A1E48554800C12272 /* lib */,
+				F249DC2D1E48554800C12272 /* opencore-amrnb */,
+				F249DC301E48554800C12272 /* opencore-amrwb */,
+				F249DC331E48554800C12272 /* VoiceConverter.h */,
+				F249DC341E48554800C12272 /* VoiceConverter.mm */,
+			);
+			path = VoiceConvert;
+			sourceTree = "<group>";
+		};
+		F249DC271E48554800C12272 /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+				F249DC281E48554800C12272 /* voiceAmrFileCodec.h */,
+				F249DC291E48554800C12272 /* voiceAmrFileCodec.mm */,
+			);
+			path = amrwapper;
+			sourceTree = "<group>";
+		};
+		F249DC2A1E48554800C12272 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				F249DC2B1E48554800C12272 /* libopencore-amrnb.a */,
+				F249DC2C1E48554800C12272 /* libopencore-amrwb.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		F249DC2D1E48554800C12272 /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				F249DC2E1E48554800C12272 /* interf_dec.h */,
+				F249DC2F1E48554800C12272 /* interf_enc.h */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		F249DC301E48554800C12272 /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				F249DC311E48554800C12272 /* dec_if.h */,
+				F249DC321E48554800C12272 /* if_rom.h */,
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
+		F249DC3A1E486BD300C12272 /* lame */ = {
+			isa = PBXGroup;
+			children = (
+				F249DC3B1E486BD300C12272 /* lame.h */,
+				F249DC3C1E486BD300C12272 /* lameTool.h */,
+				F249DC3D1E486BD300C12272 /* lameTool.m */,
+				F249DC3E1E486BD300C12272 /* libmp3lame.a */,
+			);
+			path = lame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,8 +365,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F249DC381E48554800C12272 /* VoiceConverter.mm in Sources */,
+				F249DC351E48554800C12272 /* voiceAmrFileCodec.mm in Sources */,
 				F249DC251E48270B00C12272 /* PFAudio.swift in Sources */,
 				F249DBF81E48174B00C12272 /* ViewController.swift in Sources */,
+				F249DC431E495DED00C12272 /* PFAudio.m in Sources */,
+				F249DC3F1E486BD300C12272 /* lameTool.m in Sources */,
 				F249DBF61E48174B00C12272 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,8 +524,14 @@
 				DEVELOPMENT_TEAM = 2WRR85APWJ;
 				INFOPLIST_FILE = PFAudio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PFAudio/PFAudio/VoiceConvert/lib",
+					"$(PROJECT_DIR)/PFAudio/PFAudio/lame",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zmartec.PFAudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hpf/Desktop/Cocos Library/PFAudio/PFAudio/PFAudio/PFAudio-bridge-header.h";
 				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
@@ -441,8 +543,14 @@
 				DEVELOPMENT_TEAM = 2WRR85APWJ;
 				INFOPLIST_FILE = PFAudio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PFAudio/PFAudio/VoiceConvert/lib",
+					"$(PROJECT_DIR)/PFAudio/PFAudio/lame",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zmartec.PFAudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hpf/Desktop/Cocos Library/PFAudio/PFAudio/PFAudio/PFAudio-bridge-header.h";
 				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
