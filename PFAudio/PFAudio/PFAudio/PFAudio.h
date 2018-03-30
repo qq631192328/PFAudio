@@ -14,7 +14,7 @@
  *  转换wav到amr
  *
  *  @param wavPath  wav文件路径
- *  @param isDelete 转换成功后是否删除pcm文件
+ *  @param isDelete 转换成功后是否删除源文件
  *
  *  @return NO 失败 YES成功
  */
@@ -24,7 +24,7 @@
  *  转换amr到wav
  *
  *  @param amrPath  amr文件路径
- *  @param isDelete 转换成功后是否删除pcm文件
+ *  @param isDelete 转换成功后是否删除源文件
  *
  *  @return NO 失败 YES成功
  */
@@ -34,7 +34,7 @@
  *  转换pcm到mp3
  *
  *  @param pcmPath  pcm文件路径
- *  @param isDelete 转换成功后是否删除pcm文件
+ *  @param isDelete 转换成功后是否删除源文件
  *
  *  @return NO 失败 YES成功
  */
@@ -43,7 +43,7 @@
  *  转换pcm到wav
  *
  *  @param pcmPath  pcm文件路径
- *  @param isDelete 转换成功后是否删除pcm文件
+ *  @param isDelete 转换成功后是否删除源文件
  *
  *  @return NO 失败 YES成功
  */
@@ -53,7 +53,7 @@
  *  转换pcm到amr
  *
  *  @param pcmPath  pcm文件路径
- *  @param isDelete 转换成功后是否删除pcm文件
+ *  @param isDelete 转换成功后是否删除源文件
  *
  *  @return NO 失败 YES成功
  */
@@ -64,9 +64,11 @@
  */
 + (NSData*) writeWavHead:(NSData *)audioData;
 void conventToMp3(NSString *pcmFile,NSString *mp3File);
+
 /**
-	获取录音设置.
- 建议使用此设置，如有修改，则转换amr时也要对应修改参数，比较麻烦
+	录音格式设置,转换的时候需要获取.(如:采样率、采样位数、通道的数目)
+    建议使用此设置，如有修改，则转换amr时也要对应修改参数，比较麻烦
+ 
 	@returns 录音设置
  */
 + (NSDictionary*)GetAudioRecorderSettingDict;
