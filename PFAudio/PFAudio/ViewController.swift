@@ -22,17 +22,17 @@ class ViewController: UIViewController {
         // 录音参数设置(不需要掌握, 一些固定的配置)
         let configDic: [String: AnyObject] = [
             // 编码格式
-            AVFormatIDKey: NSNumber(int: Int32(kAudioFormatLinearPCM)),
+            AVFormatIDKey: NSNumber(value: Int32(kAudioFormatLinearPCM)),
             // 采样率
-            AVSampleRateKey: NSNumber(float: 8000),
+            AVSampleRateKey: NSNumber(value: 8000),
             // 通道数
-            AVNumberOfChannelsKey: NSNumber(int: 2),
+            AVNumberOfChannelsKey: NSNumber(value: 2),
             // 录音质量
-            AVEncoderAudioQualityKey: NSNumber(int: Int32(AVAudioQuality.Min.rawValue))
+            AVEncoderAudioQualityKey: NSNumber(value: Int32(AVAudioQuality.min.rawValue))
         ]
         print(configDic)
         do {
-            let record = try AVAudioRecorder(URL: url!, settings: configDic)
+            let record = try AVAudioRecorder(url: url! as URL, settings: configDic)
             // 准备录音(系统会给我们分配一些资源)
             record.prepareToRecord()
             
@@ -46,14 +46,14 @@ class ViewController: UIViewController {
         
     }()
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("开始录音")
         // 开始录音
         record?.record()
     }
     
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         print("结束录音")
         // 结束录音

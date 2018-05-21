@@ -515,8 +515,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zmartec.PFAudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hpf/Desktop/Cocos Library/PFAudio/PFAudio/PFAudio/PFAudio-bridge-header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/PFAudio/PFAudio-bridge-header.h";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -534,8 +534,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zmartec.PFAudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hpf/Desktop/Cocos Library/PFAudio/PFAudio/PFAudio/PFAudio-bridge-header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/PFAudio/PFAudio-bridge-header.h";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -616,6 +616,7 @@
 				F249DC1C1E48174C00C12272 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F249DC1D1E48174C00C12272 /* Build configuration list for PBXNativeTarget "PFAudioTests" */ = {
 			isa = XCConfigurationList;
@@ -624,6 +625,7 @@
 				F249DC1F1E48174C00C12272 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F249DC201E48174C00C12272 /* Build configuration list for PBXNativeTarget "PFAudioUITests" */ = {
 			isa = XCConfigurationList;
@@ -632,6 +634,7 @@
 				F249DC221E48174C00C12272 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
