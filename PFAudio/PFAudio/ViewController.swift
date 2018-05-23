@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-
+    
     lazy var record: AVAudioRecorder? = {
         // 开始录音
         
