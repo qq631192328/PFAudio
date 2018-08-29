@@ -11,6 +11,7 @@
 #import "lame.h"
 
 @implementation PFAudio
+
 //转换amr到wav
 + (BOOL) amr2Wav:(NSString *)amrPath isDeleteSourchFile:(BOOL)isDelete{
     NSString *outPath = [[amrPath stringByDeletingPathExtension] stringByAppendingString:@".wav"];
@@ -26,15 +27,14 @@
 + (BOOL) wav2Amr:(NSString *)wavPath isDeleteSourchFile:(BOOL)isDelete{
     // 输出路径
     NSString *outPath = [[wavPath stringByDeletingPathExtension] stringByAppendingString:@".amr"];
-    long rateKey = [[self GetAudioRecorderSettingDict][AVSampleRateKey] longValue];
-    long bitDepthKey = [[self GetAudioRecorderSettingDict][AVLinearPCMBitDepthKey] longValue];
-    long numOfChannelsKey = [[self GetAudioRecorderSettingDict][AVNumberOfChannelsKey] longValue];
-    BOOL isSuccess = EncodeWAVEFileToAMRFile([wavPath cStringUsingEncoding:NSASCIIStringEncoding], [outPath cStringUsingEncoding:NSASCIIStringEncoding], 2, 16);
-    if (isSuccess && isDelete) {
+    int rateKey = [[self GetAudioRecorderSettingDict][AVSampleRateKey] intValue];
+    int numOfChannelsKey = [[self GetAudioRecorderSettingDict][AVNumberOfChannelsKey] intValue];
+    int resultCode = EncodeWAVEFileToAMRFile([wavPath cStringUsingEncoding:NSASCIIStringEncoding], [outPath cStringUsingEncoding:NSASCIIStringEncoding], numOfChannelsKey, rateKey);
+    if (resultCode != 0 && isDelete) {
         NSFileManager *fm = [NSFileManager defaultManager];
         [fm removeItemAtPath:wavPath error:nil];
     }
-    return isSuccess;
+    return resultCode != 0;
 }
 
 // pcm转wav
@@ -76,7 +76,7 @@
     // 输出路径
     NSString *outPath = [[pcmPath stringByDeletingPathExtension] stringByAppendingString:@".mp3"];
     @try {
-        int read, write;
+        size_t read, write;
         
         FILE *pcm = fopen([inPath cStringUsingEncoding:1], "rb");  //source 被转换的音频文件位置
         fseek(pcm, 4*1024, SEEK_CUR);                                   //skip file header
@@ -88,9 +88,8 @@
         unsigned char mp3_buffer[MP3_SIZE];
         
         lame_t lame = lame_init();
-        long rateKey = [[self GetAudioRecorderSettingDict][AVSampleRateKey] longValue];
-        long bitDepthKey = [[self GetAudioRecorderSettingDict][AVLinearPCMBitDepthKey] longValue];
-        long numOfChannelsKey = [[self GetAudioRecorderSettingDict][AVNumberOfChannelsKey] longValue];
+        int rateKey = [[self GetAudioRecorderSettingDict][AVSampleRateKey] intValue];
+        int numOfChannelsKey = [[self GetAudioRecorderSettingDict][AVNumberOfChannelsKey] intValue];
         lame_set_in_samplerate(lame, rateKey);
         lame_set_VBR(lame, vbr_default);
         lame_init_params(lame);
@@ -103,7 +102,7 @@
             if (read == 0)
                 write = lame_encode_flush(lame, mp3_buffer, MP3_SIZE);
             else
-                write = lame_encode_buffer_interleaved(lame, pcm_buffer, read, mp3_buffer, MP3_SIZE);
+                write = lame_encode_buffer_interleaved(lame, pcm_buffer, (int)read, mp3_buffer, MP3_SIZE);
             
             fwrite(mp3_buffer, write, 1, mp3);
             
@@ -216,7 +215,6 @@
     
     
     return pcmData;
-    //    [pcmData writeToFile:kVoiceWav atomically:true];
     
 }
 

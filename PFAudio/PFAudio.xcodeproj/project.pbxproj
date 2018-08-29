@@ -283,7 +283,7 @@
 				TargetAttributes = {
 					F249DBF11E48174B00C12272 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 2WRR85APWJ;
+						DevelopmentTeam = 5GK3VWM7ZP;
 						ProvisioningStyle = Automatic;
 					};
 					F249DC051E48174B00C12272 = {
@@ -505,7 +505,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2WRR85APWJ;
+				DEVELOPMENT_TEAM = 5GK3VWM7ZP;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PFAudio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -513,7 +514,7 @@
 					"$(PROJECT_DIR)/PFAudio/PFAudio/VoiceConvert/lib",
 					"$(PROJECT_DIR)/PFAudio/PFAudio/lame",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zmartec.PFAudio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hpf.PFAudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/PFAudio/PFAudio-bridge-header.h";
 				SWIFT_VERSION = 4.0;
@@ -524,7 +525,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2WRR85APWJ;
+				DEVELOPMENT_TEAM = 5GK3VWM7ZP;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PFAudio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -532,7 +534,7 @@
 					"$(PROJECT_DIR)/PFAudio/PFAudio/VoiceConvert/lib",
 					"$(PROJECT_DIR)/PFAudio/PFAudio/lame",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zmartec.PFAudio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hpf.PFAudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/PFAudio/PFAudio-bridge-header.h";
 				SWIFT_VERSION = 4.0;
