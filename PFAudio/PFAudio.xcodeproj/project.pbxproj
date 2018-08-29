@@ -518,6 +518,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/PFAudio/PFAudio-bridge-header.h";
 				SWIFT_VERSION = 4.0;
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -538,6 +539,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/PFAudio/PFAudio-bridge-header.h";
 				SWIFT_VERSION = 4.0;
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};
