@@ -2,15 +2,15 @@
 Pod::Spec.new do |s|
 
   s.name         = "PFAudio"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "PFAudio."
 
-  s.description  = "PFAudio 1.0.4"
+  s.description  = "PFAudio 1.0.5"
 
   s.homepage     = "https://github.com/qq631192328/PFAudio"
 
-  s.license      = "MIT"
-  #s.license       = { :type => 'MIT', :file => 'LICENSE' }
+  #s.license      = "MIT"
+  s.license       = { :type => 'MIT', :file => 'LICENSE' }
 
   s.author             = { "hongpeifeng" => "hongpeifeng@163.com" }
 
@@ -34,6 +34,7 @@ Pod::Spec.new do |s|
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 
+  s.frameworks  = "UIKit", "Foundation"
 
 
 end
