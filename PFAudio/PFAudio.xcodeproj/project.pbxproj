@@ -514,6 +514,7 @@
 					"$(PROJECT_DIR)/PFAudio/PFAudio/VoiceConvert/lib",
 					"$(PROJECT_DIR)/PFAudio/PFAudio/lame",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hpf.PFAudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/PFAudio/PFAudio-bridge-header.h";
@@ -535,6 +536,7 @@
 					"$(PROJECT_DIR)/PFAudio/PFAudio/VoiceConvert/lib",
 					"$(PROJECT_DIR)/PFAudio/PFAudio/lame",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hpf.PFAudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/PFAudio/PFAudio-bridge-header.h";
