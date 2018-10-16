@@ -11,11 +11,14 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    let recordFilePath = "/Users/hpf/Desktop/哈哈.pcm"
+    
     lazy var record: AVAudioRecorder? = {
         // 开始录音
         
         // url : 录音文件的路径
-        let url = NSURL(string: "/Users/hpf/Desktop/test.pcm")
+        let url = NSURL(string: recordFilePath.addingPercentEncoding(withAllowedCharacters:
+            .urlQueryAllowed) ?? "")
         
         
         // setting : 录音的设置项
@@ -58,10 +61,10 @@ class ViewController: UIViewController {
         print("结束录音")
         // 结束录音
         record?.stop()
-        //pcm转amr 采样率只能设置8000
-        PFAudio.pcm2Amr("/Users/hpf/Desktop/test.pcm", isDeleteSourchFile: true)
-        //pcm转mp3 采样率就随意
-//        PFAudio.pcm2Mp3("/Users/hpf/Desktop/test.pcm", isDeleteSourchFile: true)
+        //pcm转amr
+        PFAudio.pcm2Amr(recordFilePath, isDeleteSourchFile: false)
+        //pcm转mp3
+        PFAudio.pcm2Mp3(recordFilePath, isDeleteSourchFile: false)
     }
     
     override func viewDidLoad() {

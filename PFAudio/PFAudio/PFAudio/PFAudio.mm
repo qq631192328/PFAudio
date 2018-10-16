@@ -78,9 +78,9 @@
     @try {
         size_t read, write;
         
-        FILE *pcm = fopen([inPath cStringUsingEncoding:1], "rb");  //source 被转换的音频文件位置
+        FILE *pcm = fopen([inPath UTF8String], "rb");  //source 被转换的音频文件位置
         fseek(pcm, 4*1024, SEEK_CUR);                                   //skip file header
-        FILE *mp3 = fopen([outPath cStringUsingEncoding:1], "wb");  //output 输出生成的Mp3文件位置
+        FILE *mp3 = fopen([outPath UTF8String], "wb");  //output 输出生成的Mp3文件位置
         
         const int PCM_SIZE = 8192;
         const int MP3_SIZE = 8192;

@@ -504,7 +504,7 @@
 		F249DC1B1E48174C00C12272 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = arm64;
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5GK3VWM7ZP;
 				ENABLE_BITCODE = NO;
@@ -527,7 +527,7 @@
 		F249DC1C1E48174C00C12272 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = arm64;
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5GK3VWM7ZP;
 				ENABLE_BITCODE = NO;
